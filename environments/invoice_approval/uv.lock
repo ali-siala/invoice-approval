@@ -1086,7 +1086,7 @@ wheels = [
 
 [[package]]
 name = "invoice-approval"
-version = "0.1.0"
+version = "0.1.1"
 source = { editable = "." }
 dependencies = [
     { name = "verifiers" },

@@ -5,7 +5,7 @@ A multi-turn tool-use environment for German accounts payable (*Kreditorenrechnu
 invoices against a written approval policy, using 11 tools on a SQLite database. It is graded on the database it
 leaves behind, never on what it says.
 
-- **Environment ID:** `invoice-approval` · **Version:** 0.1.0 · **verifiers:** `==0.3.1` (legacy API)
+- **Environment ID:** `invoice-approval` · **Version:** 0.1.1 · **verifiers:** `==0.3.1` (legacy API)
 - **Type:** multi-turn, tool use, stateful · **Reward:** binary, exact final-state match
 - **Tasks:** 60 work orders in 4 tiers, all on one frozen synthetic company
 - **License:** Apache-2.0 · **Author:** Ali Siala (GitHub: [ali-siala](https://github.com/ali-siala))

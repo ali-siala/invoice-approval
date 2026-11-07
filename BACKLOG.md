@@ -18,7 +18,7 @@ Non-blocking suggestions that change neither the seed fingerprint nor a policy r
 - **Docker outputs are owned by root on the host.** The container runs as root, so `docker-outputs/` files need sudo to delete. Running with `--user "$(id -u):$(id -g)"` needs a writable HOME for vf-eval; untested.
 - **Dockerfile `CMD` is in shell form.** Docker warns (JSONArgsRecommended) that Ctrl-C may not stop the run cleanly; an exec-form `["sh", "-c", ...]` or a small entry script would fix the warning.
 - **The tests need `scripts/make_tasks.py`, which is not in the wheel.** `test_tasks.py` imports it for `coverage` and the edge-case lists, so the Docker image copies `scripts/` next to `tests/`. Moving those helpers into `ap/` (or the tests) would make the tests depend only on the installed package.
-- **Two copies of LICENSE.** The repo root and `environments/invoice_approval/` each hold the Apache-2.0 text (hatch can't include files above the project directory, and `prime env push` uploads only the environment directory). They are identical now; a test or a symlink check would keep them from drifting.
+- **Two copies of LICENSE.** The repo root and `environments/invoice_approval/licenses/` each hold the Apache-2.0 text (hatch can't include files above the project directory, and `prime env push` uploads only the environment directory, and of its top level only README.md, pyproject.toml, *.py and subdirectories). They are identical now; a test or a symlink check would keep them from drifting.
 - **The prime CLI is out of date.** Installed 0.16.0, current 0.19.0 (`prime upgrade`); worth upgrading before `prime env push` in case the push format changed.
 
 ## v2 difficulty ideas

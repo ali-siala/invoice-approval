@@ -2,9 +2,9 @@
 name = "invoice-approval"
 description = "Multi-turn tool-use agent environment: German accounts payable (Kreditorenrechnungsprüfung) under a written approval policy, graded by exact database state."
 tags = ["tool-use", "multi-turn", "enterprise", "finance", "accounting", "german", "eval", "train"]
-version = "0.1.0"
+version = "0.1.1"
 license = "Apache-2.0"
-license-files = ["LICENSE"]
+license-files = ["licenses/LICENSE"]
 authors = [{ name = "Ali Siala" }]
 requires-python = ">=3.11"
 dependencies = [

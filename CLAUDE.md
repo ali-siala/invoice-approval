@@ -14,6 +14,9 @@
 - A rollout that ends in `has_error` is an infrastructure failure, never a model failure: re-run those tasks with `-a '{"task_ids": [...]}'` until none are left, and merge the results before reading pass rates.
 - SPEC.md is the source of truth. If code and SPEC disagree, ask before changing either.
 
+## Dev-setup notes
+- prime env push uploads only README.md, pyproject.toml, *.py and subdirectories from the env folder — put any other top-level files in a subdirectory.
+
 ## Git
 - Commit after each finished task, on main, with a clear message. Never push.
 
